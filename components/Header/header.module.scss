@@ -1,0 +1,24 @@
+@import 'Root/style/variables.scss';
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.listMobile {
+  list-style: none;
+  padding: 10px;
+}
+
+.link {
+  margin-right: 20px;
+  color: white;
+}
+
+.linkMobile {
+  color: black;
+}
+
+.linkItem:not(:last-child) {
+  margin-bottom: 30px;
+}
