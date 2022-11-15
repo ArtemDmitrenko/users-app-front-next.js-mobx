@@ -1,0 +1,15 @@
+@import '../../style/variables.scss';
+
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.container .input {
+  @media (max-width: $mediaSizeMobile) {
+    width: auto;
+  }
+}

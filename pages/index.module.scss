@@ -1,0 +1,25 @@
+@import '../style/variables.scss';
+
+.container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  @media (max-width: $mediaSizeTablet) {
+    font-size: 3rem;
+  }
+}
+.description {
+  text-align: center;
+
+  @media (max-width: $mediaSizeTablet) {
+    font-size: 1.5rem;
+  }
+}

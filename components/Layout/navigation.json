@@ -1,17 +1,17 @@
 [
   {
     "id": 0,
-    "name": "Список пользователей",
-    "href": "/"
+    "name": "All users",
+    "href": "/users"
   },
   {
     "id": 1,
-    "name": "Добавить пользователя",
-    "href": "/"
+    "name": "Add user",
+    "href": "/new-user"
   },
   {
     "id": 3,
-    "name": "Несуществующая страница",
+    "name": "Not founded page...",
     "href": "/kjsdf"
   }
 ]

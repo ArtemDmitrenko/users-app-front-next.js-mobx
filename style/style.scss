@@ -1,14 +1,21 @@
 @import './variables.scss';
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
 
 * {
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
 }
 
 html {
   min-width: 320px;
   max-width: 1920px;
   margin: 0 auto;
-  color: $textColor;
   font-weight: normal;
   font-size: 14px;
   font-family: $primaryFont;

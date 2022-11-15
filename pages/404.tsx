@@ -6,11 +6,11 @@ import styles from './404.module.scss';
 const Custom404 = () => (
   <div className={styles.wrapper}>
     <div className={styles.card}>
-      <h1>Ой! Данная страница не найдена :( </h1>
+      <h1>Upps! The page is not found :( </h1>
       <h2>
         <Link href="/" passHref legacyBehavior>
           <UILink underline="hover" color="white" className={styles.link}>
-            Вернуться на главную
+            Back to main page
           </UILink>
         </Link>
       </h2>

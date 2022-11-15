@@ -1,9 +1,7 @@
 import Head from 'next/head';
 
 import Header from 'Components/Header/Header';
-
 import navigation from './navigation.json';
-
 import styles from './layout.module.scss';
 
 type LayoutProps = {

@@ -1,30 +1,26 @@
 import * as React from 'react';
-import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
+import {
+  Link as UILink,
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Container,
+  Tooltip,
+  MenuItem,
+} from '@mui/material';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Link as UILink } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
-import styles from './header.module.scss';
+import { THeaderMenu } from 'Root/types/headerMenu';
 import user from 'Root/public/images/users/no-name.jpg';
+import styles from './header.module.scss';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-type THeaderMenu = {
-  id: number;
-  name: string;
-  href: string;
-};
 
 type THeaderProps = {
   pages: Array<THeaderMenu>;
@@ -72,7 +68,6 @@ const Header = (props: THeaderProps) => {
           >
             LOGO
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -108,7 +103,7 @@ const Header = (props: THeaderProps) => {
                     <li key={id} className={styles.linkItem}>
                       <Link href={href} passHref legacyBehavior>
                         <UILink underline="hover" className={styles.linkMobile}>
-                          {name}
+                          <Typography>{name}</Typography>
                         </UILink>
                       </Link>
                     </li>
@@ -151,7 +146,6 @@ const Header = (props: THeaderProps) => {
               </ul>
             </nav>
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
