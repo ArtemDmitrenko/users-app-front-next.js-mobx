@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 
-import Layout from 'Root/components/Layout/Layout';
+import Layout from 'Components/Layout/Layout';
 import { getUsers } from 'Root/pages/api/getUsers';
 import { TUser } from 'Root/types/user';
 import styles from './index.module.scss';
@@ -29,20 +29,24 @@ const Users = (props: UsersProps) => {
         <Typography variant="h2" className={styles.title}>
           Users list:
         </Typography>
-        <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-          <List>
-            {users.map(({ _id, name }) => (
-              <ListItem disablePadding key={_id}>
-                <ListItemButton href={`/users/${_id}`}>
-                  <ListItemIcon>
-                    <PersonIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={name} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Box>
+        {users.length > 0 ? (
+          <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+            <List>
+              {users.map(({ _id, name }) => (
+                <ListItem disablePadding key={_id}>
+                  <ListItemButton href={`/users/${_id}`}>
+                    <ListItemIcon>
+                      <PersonIcon />
+                    </ListItemIcon>
+                    <ListItemText primary={name} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        ) : (
+          <Typography sx={{ mt: 2 }}>No users...</Typography>
+        )}
       </Container>
     </Layout>
   );
